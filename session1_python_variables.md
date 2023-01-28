@@ -105,6 +105,20 @@ numbers.remove(6)
 print(numbers) # Output: [1, 2, 3, 4, 5, 7]
 ```
 
+Here are more examples of using list in python. 
 
+```python
 cars = ["Tesla", "Mercedes", "BMW", "Porsche", "Ferrari"]
 print("My favorite car is a " + cars[3])
+```
+
+You can iterate the list with conditional to print specific car you like programmatically. 
+
+```python
+cars = ["Tesla", "Mercedes", "BMW", "Porsche", "Ferrari"]
+for x in cars:
+    if x=="Porsche":
+        print(x)
+		
+# This will print Porsche
+```
