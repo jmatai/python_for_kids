@@ -29,9 +29,9 @@ A string, in Python, is a sequence of characters enclosed in either single or do
 
 A string variable is a variable that stores a string value. Here is an example of a string variable:
 ```python
-name = "Abdulla"
+name = "Alice"
 print(name)
-# Output: Abdulla 
+# Output: Alice 
 
 last_name = "Smith"
 full_name = name + " " + last_name
