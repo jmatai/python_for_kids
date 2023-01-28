@@ -10,7 +10,7 @@ x = 5
 y = -3 
 ```
 
-# Python Float Type and Variables
+## Python Float Type Variable
 
 A float, or floating point number, is a type of number in Python that contains a decimal point. These numbers are useful for mathematical calculations that require precision.
 
@@ -20,4 +20,29 @@ pi = 3.14159
 
 print(pi)
 # Output: 3.14159
+```
+
+
+## Python String Type Variable
+
+A string, in Python, is a sequence of characters enclosed in either single or double quotes. It can be used to represent text or a sequence of characters.
+
+A string variable is a variable that stores a string value. Here is an example of a string variable:
+```python
+name = "Abdulla"
+print(name)
+# Output: Abdulla 
+
+last_name = "Smith"
+full_name = name + " " + last_name
+print(full_name)
+# Output: Alice Smith
+You can also use different String methods such as .upper(), .lower(), .replace()
+
+python
+Copy code
+print(name.upper())
+# Output: ALICE
+print(name.replace("A", "X"))
+# Output: Xlice
 ```
