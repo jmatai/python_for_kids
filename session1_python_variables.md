@@ -37,10 +37,10 @@ last_name = "Smith"
 full_name = name + " " + last_name
 print(full_name)
 # Output: Alice Smith
+```
 You can also use different String methods such as .upper(), .lower(), .replace()
 
-python
-Copy code
+```python
 print(name.upper())
 # Output: ALICE
 print(name.replace("A", "X"))
