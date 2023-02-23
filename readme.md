@@ -35,3 +35,4 @@
 ## Week 6: Final Project and Review
 - Students will work on a final project using the concepts they have learned
 - Review of all material covered in the course
+- Push your project source files into github.  
