@@ -142,3 +142,99 @@ my_dict = {(1, 2): "value"}
 
 print(my_dict[(1, 2)])  # Output: "value"
 ```
+
+##Python dictionaries
+In Python, a dictionary is a collection of key-value pairs, where each key is associated with a value. Dictionaries are unordered and mutable, meaning you can add, remove, or modify items after creation.
+
+Dictionaries are created using curly braces {} or the dict() function, with each key-value pair separated by a colon : and each pair separated by a comma ,. For example:
+
+```python
+my_dict = {"key1": "value1", "key2": "value2", "key3": "value3"}
+
+```
+### Using Python dictionaries
+
+Accessing values in a dictionary: 
+To access a value in a dictionary, you can use the key associated with that value. For example:
+
+```python
+my_dict = {"name": "Alice", "age": 30}
+
+print(my_dict["name"])  # Output: "Alice"
+print(my_dict["age"])  # Output: 30
+
+```
+
+If the key does not exist in the dictionary, a KeyError will be raised. You can also use the get() method to retrieve a value, which will return None if the key does not exist, or a default value if specified. For example:
+
+```python
+my_dict = {"name": "Alice", "age": 30}
+
+print(my_dict.get("name"))  # Output: "Alice"
+print(my_dict.get("height"))  # Output: None
+print(my_dict.get("height", 160))  # Output: 160
+
+```
+
+**Adding and modifying items in a dictionary**
+To add an item to a dictionary, you can simply assign a new key-value pair to the dictionary. For example:
+
+```python
+my_dict = {"name": "Alice", "age": 30}
+
+my_dict["height"] = 160
+
+print(my_dict)  # Output: {"name": "Alice", "age": 30, "height": 160}
+
+```
+
+To modify an item in a dictionary, you can use the key associated with that item. For example:
+
+```python
+my_dict = {"name": "Alice", "age": 30}
+
+my_dict["height"] = 160
+
+print(my_dict)  # Output: {"name": "Alice", "age": 30, "height": 160}
+
+```
+
+**Removing items from a dictionary**
+To remove an item from a dictionary, you can use the del keyword followed by the key associated with that item. For example:
+
+```python
+my_dict = {"name": "Alice", "age": 30}
+
+del my_dict["age"]
+
+print(my_dict)  # Output: {"name": "Alice"}
+
+```
+
+
+**Looping through a dictionary**
+To loop through a dictionary, you can use a for loop with the items() method, which returns a list of key-value pairs. For example:
+
+```python
+my_dict = {"name": "Alice", "age": 30}
+
+for key, value in my_dict.items():
+    print(key, value)
+    
+# Output:
+# name Alice
+# age 30
+
+```
+
+Checking if a key exists in a dictionary
+To check if a key exists in a dictionary, you can use the in keyword. For example:
+
+
+```python
+my_dict = {"name": "Alice", "age": 30}
+
+if "name" in my_dict:
+    print("Name exists in dictionary")
+
+```
