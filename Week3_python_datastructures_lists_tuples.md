@@ -91,7 +91,7 @@ my_tuple = 1, 2, 3
 
 ### Examples of using tuples in Python
 
-Accessing elements of a tuple:
+**Accessing elements of a tuple**
 To access elements of a tuple, you can use indexing. Indexing starts at 0 for the first element, and negative indexing starts at -1 for the last element. For example:
 ```python
 my_tuple = (1, 2, 3)
@@ -100,7 +100,7 @@ print(my_tuple[0])  # Output: 1
 print(my_tuple[-1])  # Output: 3
 ```
 
-Immutable nature of tuples:
+**Immutable nature of tuples**
 Since tuples are immutable, you cannot modify their contents. Attempting to do so will result in a TypeError. For example:
 ```python
 my_tuple = (1, 2, 3)
@@ -108,7 +108,7 @@ my_tuple = (1, 2, 3)
 my_tuple[0] = 4  # Raises a TypeError: 'tuple' object does not support item assignment
 ```
 
-Using tuples for multiple assignments:
+**Using tuples for multiple assignments**
 Tuples can also be used for multiple assignments in a single line. This can be useful when you want to assign values to multiple variables at once. For example:
 ```python
 my_tuple = (1, 2, 3)
@@ -120,7 +120,7 @@ print(b)  # Output: 2
 print(c)  # Output: 3
 ```
 
-Using tuples as function return values:
+**Using tuples as function return values**
 Tuples are often used to return multiple values from a function. For example:
 ```python
 def get_name_and_age():
@@ -134,7 +134,7 @@ print(name)  # Output: "Alice"
 print(age)  # Output: 30
 ```
 
-Using tuples as dictionary keys:
+**Using tuples as dictionary keys**
 Tuples can also be used as keys in dictionaries. This is because tuples are immutable and therefore can be hashed, while lists are not hashable and cannot be used as keys. For example:
 
 ```python
@@ -154,7 +154,7 @@ my_dict = {"key1": "value1", "key2": "value2", "key3": "value3"}
 ```
 ### Using Python dictionaries
 
-Accessing values in a dictionary: 
+**Accessing values in a dictionary** 
 To access a value in a dictionary, you can use the key associated with that value. For example:
 
 ```python
