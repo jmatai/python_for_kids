@@ -32,7 +32,7 @@ class Vector:
 
 ```
 
-## Part 3
+## Part 3 (Optional) 
 
 Write a python function that takes two matrices (A and B) as an input, and this function should output the multiplication of these two matrices as C. Below is a pseudo code is goven for you. 
 
