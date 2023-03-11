@@ -188,10 +188,10 @@ class SuperVector:
 
 ```
 
-- The __add__ method is defined to overload the + operator, so that we can add two SuperVector instances using the + operator. It takes the second vector as the other parameter and checks if the two vectors are of the same size. If they are not, it raises a ValueError exception. Otherwise, it creates a new vector whose components are the sum of the corresponding components of the two vectors, and returns it as a new SuperVector instance.
+- The \__add\__ method is defined to overload the + operator, so that we can add two SuperVector instances using the + operator. It takes the second vector as the other parameter and checks if the two vectors are of the same size. If they are not, it raises a ValueError exception. Otherwise, it creates a new vector whose components are the sum of the corresponding components of the two vectors, and returns it as a new SuperVector instance.
 
-- The __sub__ method is defined to overload the - operator, so that we can subtract two SuperVector instances using the - operator. It takes the second vector as the other parameter and checks if the two vectors are of the same size. If they are not, it raises a ValueError exception. Otherwise, it creates a new vector whose components are the difference of the corresponding components of the two vectors, and returns it as a new SuperVector instance.
+- The \__sub\__ method is defined to overload the - operator, so that we can subtract two SuperVector instances using the - operator. It takes the second vector as the other parameter and checks if the two vectors are of the same size. If they are not, it raises a ValueError exception. Otherwise, it creates a new vector whose components are the difference of the corresponding components of the two vectors, and returns it as a new SuperVector instance.
 
-- The __mul__ method is defined to overload the * operator, so that we can perform dot product of two SuperVector instances using the * operator. It takes the second vector as the other parameter and checks if the two vectors are of the same size. If they are not, it raises a ValueError exception. Otherwise, it calculates the dot product of the two vectors, and returns it as a scalar value.
+- The \__mul\__ method is defined to overload the * operator, so that we can perform dot product of two SuperVector instances using the * operator. It takes the second vector as the other parameter and checks if the two vectors are of the same size. If they are not, it raises a ValueError exception. Otherwise, it calculates the dot product of the two vectors, and returns it as a scalar value.
 
 
