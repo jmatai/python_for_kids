@@ -102,7 +102,7 @@ $$
 \left(\begin{array}{cc} 
 10 & 0\\ 
 0 & 5
-\end{array}\right) 
+\end{array}\right)= 
 \left(\begin{array}{cc} 
 10 & 0\\ 
 0 & 5
