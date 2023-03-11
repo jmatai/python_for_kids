@@ -3,7 +3,7 @@
 
 ## Part 1
 
-[Review the Git, Github and PyCharm from this link. There is a youtube video oat the end ](https://github.com/jmatai/python_for_kids/blob/main/Assignments/Meeting3_Supplemental.pptx.pdf)
+[Review the Git, Github and PyCharm from this link. There is a youtube video oat the end. It is 17 page total. ](https://github.com/jmatai/python_for_kids/blob/main/Assignments/Meeting3_Supplemental.pptx.pdf)
 
 
 ## Part 2
