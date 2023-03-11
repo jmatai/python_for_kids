@@ -92,7 +92,7 @@ print(v5)  # Output: (2, 4, 6)
 In this example, we create two vectors v1 and v2 with components (1, 2, 3) and (4, 5, 6), respectively. We then use the add, subtract, and multiply methods to perform vector operations on these vectors. Finally, we print the resulting vectors using the __str__ method.
 
 
-## Python Matrix Operations
+## Python Matrix Multiplication 
 
 Let A be an m x n matrix and B be an n x p matrix. Then, the product of A and B, denoted by AB, is an m x p matrix defined as follows:
 
@@ -106,7 +106,7 @@ Note that for the product AB to be defined, the number of columns in A must be e
 
 $$
 \left(\begin{array}{cc} 
-\color{red} a_{1,1} & a_{1,2} & a_{1,3}\\
+a_{1,1} & a_{1,2} & a_{1,3}\\
 a_{2,1} & a_{2,2} & a_{2,3}
 \end{array}\right)*
 \left(\begin{array}{cc} 
