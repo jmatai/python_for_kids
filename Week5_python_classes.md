@@ -102,7 +102,12 @@ $$
 \left(\begin{array}{cc} 
 10 & 0\\ 
 0 & 5
-\end{array}\right)
+\end{array}\right) 
+= 
+\left(\begin{array}{cc} 
+10 & 0\\ 
+0 & 5
+\end{array}\right) 
 $$ 
 
 Let A be an m x n matrix and B be an n x p matrix. Then, the product of A and B, denoted by AB, is an m x p matrix defined as follows:
