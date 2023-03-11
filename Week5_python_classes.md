@@ -126,6 +126,7 @@ $$
 $$
 c_{2,2}=a_{2,1}*b_{1,2}+a_{2,2}*b_{2,2}+a_{2,3}*b_{3,2}
 $$
+
 Let A be an m x n matrix and B be an n x p matrix. Then, the product of A and B, denoted by AB, is an m x p matrix defined as follows:
 
 - The element in row i and column j of AB is obtained by multiplying the elements in the ith row of A with the elements in the jth column of B, and summing the products. That is:
