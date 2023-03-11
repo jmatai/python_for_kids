@@ -111,11 +111,11 @@ class SuperVector:
 
 The SuperVector class four four methods:
 
-- __init__: This is the constructor method. It takes a list of components and initializes the object's components attribute.
+- \_\_init\_\_: This is the constructor method. It takes a list of components and initializes the object's components attribute.
 - add: This method takes another SuperVector object and returns the sum of the two vectors. It checks that the vectors have the same size, creates a new list to hold the result, iterates over the indices of the components, adds the corresponding components, and appends the result to the result list. Finally, it returns a new SuperVector object with the resulting components.
 - sub: This method is similar to add, but it subtracts the corresponding components of the two vectors instead of adding them.
 - mul: This method takes another SuperVector object and returns the dot product of the two vectors. It checks that the vectors have the same size, initializes the result to zero, iterates over the indices of the components, multiplies the corresponding components, and adds the result to the running total. Finally, it returns the final result.
-- __repr__: This is a special method that returns a string representation of the SuperVector object. In this case, it returns a string that includes the object's components attribute.
+- \_\_repr\_\_: This is a special method that returns a string representation of the SuperVector object. In this case, it returns a string that includes the object's components attribute.
 
 Question: Why we say SuperVector has four methods? 
 
@@ -140,7 +140,7 @@ Operator overloading is a feature in Python (and many other programming language
 
 In Python, operator overloading is achieved by defining special methods for classes that correspond to the specific operator being overloaded. These methods are known as "magic" or "dunder" methods, because they have double underscores (__) before and after their names.
 
-For example, to overload the + operator for a custom class SuperVector, you can define a special method __add__(self, other) inside the class, where self refers to the instance of the class and other refers to the other operand being added to it. Similarly, to overload the - operator, you can define the __sub__(self, other) method, and so on for other operators.
+For example, to overload the + operator for a custom class SuperVector, you can define a special method \_\_add\_\_(self, other) inside the class, where self refers to the instance of the class and other refers to the other operand being added to it. Similarly, to overload the - operator, you can define the \_\_sub\_\_(self, other) method, and so on for other operators.
 
 By defining these methods, you can customize the behavior of operators for instances of your own class. This can be useful when you want to create a custom data type and define how it should behave under different arithmetic operations.
 
@@ -195,3 +195,33 @@ class SuperVector:
 - The \_\_mul\_\_ method is defined to overload the * operator, so that we can perform dot product of two SuperVector instances using the * operator. It takes the second vector as the other parameter and checks if the two vectors are of the same size. If they are not, it raises a ValueError exception. Otherwise, it calculates the dot product of the two vectors, and returns it as a scalar value.
 
 
+### SuperVector Class Version 3
+Here we use list comprehension and further improve our SuperVector class from version 2. 
+
+```python
+class SuperVector:
+    def __init__(self, components):
+        self.components = components
+
+    def __add__(self, other):
+        if len(self.components) != len(other.components):
+            raise ValueError("Vectors must be of the same size to add.")
+        return SuperVector([a + b for a, b in zip(self.components, other.components)])
+
+    def __sub__(self, other):
+        if len(self.components) != len(other.components):
+            raise ValueError("Vectors must be of the same size to subtract.")
+        return SuperVector([a - b for a, b in zip(self.components, other.components)])
+
+    def __mul__(self, other):
+        if len(self.components) != len(other.components):
+            raise ValueError("Vectors must be of the same size to multiply.")
+        return sum(a * b for a, b in zip(self.components, other.components))
+
+    def __repr__(self):
+        return f"Vector({self.components})"
+
+
+```
+
+SuperVector([a + b for a, b in zip(self.components, other.components)]) is a list comprehension that generates a new list by adding corresponding elements of two vectors. The zip function combines the elements of two lists into tuples of corresponding elements. The for loop then iterates over these tuples, adding the elements together and creating a new list of the results. Finally, the resulting list is used to create a new instance of the SuperVector class, which is returned by the method. This is the implementation of the \_\_add\_\_ operator overloading method for adding two vectors.
