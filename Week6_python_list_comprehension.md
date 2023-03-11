@@ -57,5 +57,5 @@ zipped = zip(list1, list2)
 print(list(zipped))
 # Output: [(1, 'a'), (2, 'b'), (3, 'c')]
 ```
-In the example above, the zip() function is used to combine two lists (list1 and list2) into a single iterable (zipped). The list() function is used to convert the iterable into a list of tuples.
+In the example above, the **zip()** function is used to combine two lists (**list1** and **list2**) into a single iterable (**zipped**). The **list()** function is used to convert the iterable into a list of tuples.
 
