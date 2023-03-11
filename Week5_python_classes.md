@@ -96,12 +96,12 @@ In this example, we create two vectors v1 and v2 with components (1, 2, 3) and (
 
 $$
 \left(\begin{array}{cc} 
-\color{red} a_{1,1} & 0.4472136\\
--0.4472136 & -0.8944272
+\color{red} a_{1,1} & a_{1,2} & a_{1,3}\\
+& a_{2,1} & a_{2,2} & a_{2,3}
 \end{array}\right)*
 \left(\begin{array}{cc} 
-10 & 0\\ 
-0 & 5
+b_{1,1} & b_{1,2}\\ 
+b_{2,1} & b_{2,2}
 \end{array}\right)= 
 \left(\begin{array}{cc} 
 10 & 0\\ 
