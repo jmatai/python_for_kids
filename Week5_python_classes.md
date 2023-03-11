@@ -96,7 +96,7 @@ In this example, we create two vectors v1 and v2 with components (1, 2, 3) and (
 
 $$
 \left(\begin{array}{cc} 
-0.8944272 & 0.4472136\\
+a_1_1 & 0.4472136\\
 -0.4472136 & -0.8944272
 \end{array}\right)
 \left(\begin{array}{cc} 
