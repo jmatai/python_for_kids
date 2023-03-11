@@ -112,9 +112,7 @@ $$
 
 
 $$
-\begin
-c_{1,1} = a_{1,1} & a_{1,2} & a_{1,3}\\
-\end
+c_{1,1} = a_{1,1} 
 $$ 
 
 Let A be an m x n matrix and B be an n x p matrix. Then, the product of A and B, denoted by AB, is an m x p matrix defined as follows:
