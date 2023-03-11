@@ -97,15 +97,16 @@ In this example, we create two vectors v1 and v2 with components (1, 2, 3) and (
 $$
 \left(\begin{array}{cc} 
 \color{red} a_{1,1} & a_{1,2} & a_{1,3}\\
-& a_{2,1} & a_{2,2} & a_{2,3}
+a_{2,1} & a_{2,2} & a_{2,3}
 \end{array}\right)*
 \left(\begin{array}{cc} 
 b_{1,1} & b_{1,2}\\ 
-b_{2,1} & b_{2,2}
+b_{2,1} & b_{2,2}\\
+b_{3,1} & b_{3,2}
 \end{array}\right)= 
 \left(\begin{array}{cc} 
-10 & 0\\ 
-0 & 5
+c_{1,1} & c_{1,2}\\ 
+c_{2,1} & c_{2,2}
 \end{array}\right) 
 $$ 
 
