@@ -94,6 +94,16 @@ In this example, we create two vectors v1 and v2 with components (1, 2, 3) and (
 
 ## Python Matrix Operations
 
+Let A be an m x n matrix and B be an n x p matrix. Then, the product of A and B, denoted by AB, is an m x p matrix defined as follows:
+
+- The element in row i and column j of AB is obtained by multiplying the elements in the ith row of A with the elements in the jth column of B, and summing the products. That is:
+- (AB)_ij = a_i1 * b_1j + a_i2 * b_2j + ... + a_in * b_nj
+
+- In other words, the (i,j)th entry of AB is the dot product of the ith row of A and the jth column of B.
+
+Note that for the product AB to be defined, the number of columns in A must be equal to the number of rows in B.
+
+
 $$
 \left(\begin{array}{cc} 
 \color{red} a_{1,1} & a_{1,2} & a_{1,3}\\
@@ -127,13 +137,3 @@ $$
 $$
 c_{2,2}=a_{2,1}*b_{1,2}+a_{2,2}*b_{2,2}+a_{2,3}*b_{3,2}
 $$
-
-Let A be an m x n matrix and B be an n x p matrix. Then, the product of A and B, denoted by AB, is an m x p matrix defined as follows:
-
-- The element in row i and column j of AB is obtained by multiplying the elements in the ith row of A with the elements in the jth column of B, and summing the products. That is:
-
-  (AB)_ij = a_i1 * b_1j + a_i2 * b_2j + ... + a_in * b_nj
-
-  In other words, the (i,j)th entry of AB is the dot product of the ith row of A and the jth column of B.
-
-Note that for the product AB to be defined, the number of columns in A must be equal to the number of rows in B.
