@@ -110,6 +110,7 @@ c_{2,1} & c_{2,2}
 \end{array}\right) 
 $$ 
 
+Here is how the results are calculated: 
 
 $$
 c_{1,1}=a_{1,1}*b_{1,1}+a_{1,2}*b_{3,2}+a_{1,3}*b_{3,2}
