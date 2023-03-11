@@ -98,11 +98,11 @@ $$
 \left(\begin{array}{cc} 
 \color{red} a_{1,1} & 0.4472136\\
 -0.4472136 & -0.8944272
-\end{array}\right)
+\end{array}\right)*
 \left(\begin{array}{cc} 
 10 & 0\\ 
 0 & 5
-\end{array}\right = ) 
+\end{array}\right) 
 \left(\begin{array}{cc} 
 10 & 0\\ 
 0 & 5
