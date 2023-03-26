@@ -1,3 +1,9 @@
+## Assignment 5: Sobel edge detection
+1) Read this document and understand the sobel edge detection
+2) Complete the python code for solel edge detection 
+   - Create a sobel_edge_detection.py file
+   - Push your code to https://github.com/Damouiii/MyPythonProject 
+   
 ## Sobel Edge Detection
 
 Sobel edge detection is a popular method for detecting edges in an image. It works by convolving the image with a small kernel, usually a 3x3 or 5x5 matrix, and calculating the gradient magnitude at each pixel. The gradient magnitude is a measure of the rate of change of the image intensity, and it is higher at pixels where there is a sudden change in intensity, such as at an edge.
@@ -9,18 +15,19 @@ The Sobel operator consists of two separate kernels: one for detecting edges in 
 The Sobel operator is a discrete differentiator, meaning that it approximates the gradient of the image intensity function at each pixel. The x and y direction kernels are defined as:
 
 ```python
-# import necessary libraries
-from PIL import Image
-import numpy as np
-Gx = [[-1, 0, 1], [-2, 0, 2], [-1, 0, 1]]
-Gy = [[-1, -2, -1], [0, 0, 0], [1, 2, 1]]
+          _               _                   _                _
+         |                 |                 |                  |
+         | 1.0   0.0  -1.0 |                 |  1.0   2.0   1.0 |
+    Gx = | 2.0   0.0  -2.0 |    and     Gy = |  0.0   0.0   0.0 |
+         | 1.0   0.0  -1.0 |                 | -1.0  -2.0  -1.0 |
+         |_               _|                 |_                _|
 ```
 
 To apply these kernels to an image, we convolve the kernel with the image at each pixel. The convolution operation involves sliding the kernel over the image and computing the dot product of the kernel with the image values at each position. The result of this operation at each pixel is a single scalar value representing the intensity gradient in the x or y direction.
 
 ### Python Code for Sobel Edge Detection
 
-Here's the Python code for Sobel edge detection using the OpenCV library:
+Here is a template code for python sobel edge detection 
 
 
 ```python
