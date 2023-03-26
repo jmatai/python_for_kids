@@ -1,8 +1,10 @@
 ## Assignment 5: Sobel edge detection
 1) Read this document and understand the sobel edge detection
-2) Complete the python code for solel edge detection 
+2) Complete the python code (use the template provided below) for solel edge detection 
    - Create a sobel_edge_detection.py file
    - Push your code to https://github.com/Damouiii/MyPythonProject 
+
+3) Optional:  Complete questions 4 and 5 from: https://github.com/jmatai/python_for_kids/blob/main/session7_python_questions_linear_algebra%20-%20Copy.md
    
 ## Sobel Edge Detection
 
@@ -24,6 +26,10 @@ The Sobel operator is a discrete differentiator, meaning that it approximates th
 ```
 
 To apply these kernels to an image, we convolve the kernel with the image at each pixel. The convolution operation involves sliding the kernel over the image and computing the dot product of the kernel with the image values at each position. The result of this operation at each pixel is a single scalar value representing the intensity gradient in the x or y direction.
+
+[More details about sobel filter](https://en.wikipedia.org/wiki/Sobel_operator)
+
+
 
 ### Python Code for Sobel Edge Detection
 
