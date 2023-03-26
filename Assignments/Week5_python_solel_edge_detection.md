@@ -1,10 +1,12 @@
-## Assignment 5: Sobel edge detection
+## Assignment 5: Sobel edge detection and Linear Algebra 
 1) Read this document and understand the sobel edge detection
 2) Complete the python code (use the template provided below) for solel edge detection 
    - Create a sobel_edge_detection.py file
    - Push your code to https://github.com/Damouiii/MyPythonProject 
 
-3) Optional:  Complete questions 4 and 5 from: https://github.com/jmatai/python_for_kids/blob/main/session7_python_questions_linear_algebra%20-%20Copy.md
+3) Optional:  Complete questions 4 and 5 from: [Linear algebra python questions](https://github.com/jmatai/python_for_kids/blob/main/session7_python_questions_linear_algebra%20-%20Copy.md)
+
+
    
 ## Sobel Edge Detection
 
