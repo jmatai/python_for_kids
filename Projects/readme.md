@@ -1,24 +1,24 @@
-# Project Proposal Overview 
+#Project Proposal Overview 
 
-##Introduction and Goals:
+## Introduction and Goals:
 The mentorship program is designed to introduce high school students to advanced technologies such as machine learning and computer vision, and teach them how to do research, propose research topics, do independent study, and conduct experiments and feasibility studies.
 The main goal of the program is to expose students to advanced research and provide them with the skills and knowledge to pursue their own research interests in these fields.
 
-##Python Programming:
+## Python Programming:
 In the first two months of the program, students will learn Python programming. The curriculum will cover the basics of data types, control structures, and functions, and gradually introduce more advanced topics such as object-oriented programming, data visualization, and machine learning libraries such as NumPy and Pandas.
 The program will include exercises and mini-projects to help students practice their coding skills and reinforce their learning.
 
-##Project Proposal:
+## Project Proposal:
 At the end of the second month, students will propose a research topic that they would like to work on for the remainder of the program. The program mentor will provide a template or guidelines to follow when writing the proposal.
 Students are encouraged to focus on projects that are feasible and realistic given their skills and resources. The mentor will provide feedback on the proposals and suggest modifications or alternative ideas if necessary.
 Students are also encouraged to think about the potential impact of their projects and how they can contribute to the broader community of machine learning and computer vision researchers.
 
-##Project Work:
+## Project Work:
 Students will work on their research projects for the remaining months of the program, meeting weekly with the mentor to discuss progress, get feedback, and ask questions.
 The mentor will offer resources such as datasets, code snippets, and research papers that the students can use as references for their projects.
 The mentor will encourage collaboration and sharing of ideas among the students, but also emphasize the importance of independent work and original ideas.
 
-##Project Completion:
+## Project Completion:
 At the end of the program, students will write a final report summarizing their project and its outcomes. They will also push all source code and a readme file to Github.
 The mentor may organize a showcase or presentation event where the students can present their projects to an audience of peers, parents, and other researchers.
 The mentor may also offer opportunities for the students to continue their research and participate in hackathons, conferences, or other events in the field of machine learning and computer vision.
@@ -26,9 +26,9 @@ The mentor may also offer opportunities for the students to continue their resea
 
 # Candaite Projects  
 Here are list of candiate projects (This list will be updated)  
-##Candiated Projects: Computer Vision 
+## Candiated Projects: Computer Vision 
 
-###Object Detection 
+### Object Detection 
 **Real-time object detection with YOLOv5:**
 
 -Tutorial: https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
@@ -43,7 +43,7 @@ Here are list of candiate projects (This list will be updated)
 
 
 
-###Object Segmentation 
+### Object Segmentation 
 
 **Medical image segmentation with DeepLab V3+:**
 
@@ -69,13 +69,13 @@ CIFAR-10 dataset: https://www.cs.toronto.edu/~kriz/cifar.html
 -Flowers dataset: https://www.tensorflow.org/datasets/catalog/tf_flowers
 
 
-###Depth Estimation for Autonomous Drivng 
+### Depth Estimation for Autonomous Drivng 
 
 **Monocular depth estimation:** Build a system that can estimate the depth of a scene from a single image using deep learning algorithms. This could involve training a convolutional neural network (CNN) on a dataset of labeled images and depth maps, and using the output of the network to estimate the depth of a new image. Here is a tutorial on monocular depth estimation using deep learning: https://towardsdatascience.com/monocular-depth-estimation-using-deep-learning-and-opencv-5bfc3ddc858
 
 **Stereo depth estimation:** Build a system that can estimate the depth of a scene from a stereo pair of images using deep learning algorithms. This could involve training a CNN on a dataset of labeled stereo image pairs and corresponding depth maps, and using the output of the network to estimate the depth of a new stereo pair. Here is a tutorial on stereo depth estimation using deep learning: https://towardsdatascience.com/depth-perception-using-stereo-images-and-deep-learning-19c2d3815a74
 
-###Advanced Computer Vision
+### Advanced Computer Vision
 
 **NeRF( Neural Radiance Field)** 
 
