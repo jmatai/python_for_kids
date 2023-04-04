@@ -1,4 +1,4 @@
-#Project Proposal Overview 
+# Project Proposal Overview 
 
 ## Introduction and Goals:
 The mentorship program is designed to introduce high school students to advanced technologies such as machine learning and computer vision, and teach them how to do research, propose research topics, do independent study, and conduct experiments and feasibility studies.
