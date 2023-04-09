@@ -8,7 +8,7 @@ In python, dictionary datastructure ({}) is an implementation of hashtable.
 
 Hashtable is used in almost every field of computer science ranging from machine learning, computer networks to database indexing. 
 
-In this assignment, you have two tasks.
+In this assignment, you have two tasks in hashtable (and one optional task for recursion -- see below).
 1) Read and about python dictionary from here: https://www.freecodecamp.org/news/python-dictionaries-detailed-visual-introduction/
 2) Design and implement a hashtable class as follows: 
 
