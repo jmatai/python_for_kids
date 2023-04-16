@@ -58,3 +58,46 @@ In the first example, we add a new key-value pair to the dictionary using square
 - How do you clear all the key-value pairs from a dictionary?
 - How do you create a dictionary from two lists, where one list contains keys and the other list contains values?
 
+
+## Part 3: Advanced Dictionaries Questions  
+
+### More on Python Dictionaries. 
+
+**Looping through a dictionary:**
+You can loop through the keys or values of a dictionary using the keys(), values(), or items() methods. Here is an example
+
+
+```python
+for key in student_grades.keys():
+    print(key)
+
+for value in student_grades.values():
+    print(value)
+
+for key, value in student_grades.items():
+    print(key, value)
+
+```
+
+**Finding the maximum and minimum values in a dictionary:**
+You can find the maximum and minimum values in a dictionary using the max() and min() functions. Here is an example:
+
+```python
+max_value = max(student_grades.values())
+min_value = min(student_grades.values())
+print(max_value, min_value)
+
+```
+
+### Questions 
+- Write a Python program to create a dictionary of student names and their respective grades. Then, print out the name and grade of each student.
+- Write a Python program to check if a key exists in a dictionary.
+- Write a Python program to get the maximum and minimum values in a dictionary.
+- Write a Python program to create a dictionary from a list of tuples.
+- Write a Python program to find the key with the highest value in a dictionary.
+- Write a Python program to count the frequency of each word in a given string using a dictionary.
+- Write a Python function to merge two dictionaries into a single dictionary.
+- Write a Python program to sort a dictionary by value.
+- Write a Python program to find the common keys in two dictionaries.
+
+
