@@ -28,6 +28,12 @@ The mentor may also offer opportunities for the students to continue their resea
 Here are list of candiate projects (This list will be updated)  
 ## Candiated Projects: Computer Vision 
 
+
+### Hand Gesture Recognition  
+In this project, we aim to recognizethe hand gesture from an image. 
+See the following example project: 
+https://github.com/kinivi/hand-gesture-recognition-mediapipe
+
 ### Object Detection 
 **Real-time object detection with YOLOv5:**
 
