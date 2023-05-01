@@ -2,8 +2,8 @@
 
 
 ## Part 1
-
-- Review lists, tuples and dictionary from here: https://python101.pythonlibrary.org/chapter3_lists_dicts.html
+- Review lists, tuples, sets and dictionary from here: https://www.educative.io/answers/list-vs-tuple-vs-set-vs-dictionary-in-python 
+- Do more review lists, tuples and dictionary from here: https://python101.pythonlibrary.org/chapter3_lists_dicts.html
 - Run the examles on your computer 
 
 
