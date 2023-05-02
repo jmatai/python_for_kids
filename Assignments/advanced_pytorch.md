@@ -24,7 +24,10 @@ Here's an image of a drag racer in action:
 
 ![Convolution](conv.JPG)
 
-Move along.
 
-- Design and implement convoltion for 
+
+Design and implement convoltion for above picture or with following parameters:
+- Your input is 3D (HxWxC) where H is the height, W is the width and C is the number of channels 
+- You have M kernels where each kernel size is 3x3xC 
+- Your output should be RxRxM dimension  
 
