@@ -31,3 +31,17 @@ Design and implement convoltion for above picture or with following parameters:
 - You have M kernels where each kernel size is 3x3xC 
 - Your output should be RxRxM dimension  
 
+![Convolution](algo_for_conv.JPG)
+```python
+N = 4
+M = 4  
+K = 6
+
+x =  np.random.rand(N,M)
+y =  np.random.rand(M,K)
+
+# Write code that multiplies x and y below 
+
+
+
+```
