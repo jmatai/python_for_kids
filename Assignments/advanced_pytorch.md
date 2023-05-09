@@ -30,18 +30,7 @@ Design and implement convoltion for above picture or with following parameters:
 - Your input is 3D (HxWxC) where H is the height, W is the width and C is the number of channels 
 - You have M kernels where each kernel size is 3x3xC 
 - Your output should be RxRxM dimension  
+- Provided below is a pseudo code for computing convolution (please use it) 
+
 
 ![Convolution](algo_for_conv.JPG)
-```python
-N = 4
-M = 4  
-K = 6
-
-x =  np.random.rand(N,M)
-y =  np.random.rand(M,K)
-
-# Write code that multiplies x and y below 
-
-
-
-```
