@@ -1,7 +1,6 @@
 # Contents
  - [Project Overview](#project-overview) 
  - [Prepare the data and environment](#1-prepare-the-data-and-environment)
-     - [Check the device and import modules](#1.1.-check-the-device-and-import-modules)
  - [Define the Convolutional Neural Network model](#2-define-the-convolutional-neural-network-model)
  - [Train the model](#3-train-the-model)
  - [Define Test function](#4-define-test-function)
@@ -44,7 +43,7 @@ The datasets module allows you to work with pre-built datasets like MNIST, CIFAR
 The ToTensor class from the transforms module allows you to convert data, such as images, into PyTorch tensors, which is the appropriate format for deep learning models.
 These imports enable you to load and process datasets, as well as convert the data into a suitable format for training and inference with deep learning models.
 
-### 1.2 Get the dataset  
+### 1.2. Get the dataset  
 ```python
 # Import the necessary modules
 from torchvision import datasets
