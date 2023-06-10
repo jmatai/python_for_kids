@@ -64,32 +64,6 @@ print(train_data.targets.size())    # Number of labels in the training dataset
 ```
 
 
-```python
-# Import the necessary modules
-from torchvision import datasets
-from torchvision.transforms import ToTensor
-
-# Download the MNIST training dataset
-train_data = datasets.MNIST(
-    root='data',              # Root directory where the dataset will be stored
-    train=True,               # Download the training split of the dataset
-    transform=ToTensor(),     # Convert the image to a PyTorch tensor
-    download=True,            # Download the dataset if it doesn't exist
-)
-
-# Download the MNIST test dataset
-test_data = datasets.MNIST(
-    root='data',              # Root directory where the dataset will be stored
-    train=False,              # Download the test split of the dataset
-    transform=ToTensor(),     # Convert the image to a PyTorch tensor
-)
-
-# Print information about the training dataset
-print(train_data)
-print(train_data.data.size())       # Size/shape of the input images
-print(train_data.targets.size())    # Number of labels in the training dataset
-```
-
 1. `datasets.MNIST`: This is a class provided by the torchvision library that represents the MNIST dataset. It allows you to download and work with the MNIST dataset conveniently. When creating an instance of this class, you can pass various parameters to customize its behavior. In the code, `datasets.MNIST()` is used to create instances for both the training and test datasets.
 
 2. `root`: This parameter specifies the root directory where the downloaded dataset will be stored. In the code, `'data'` is used as the root directory. If the directory doesn't exist, it will be created.
@@ -107,3 +81,162 @@ print(train_data.targets.size())    # Number of labels in the training dataset
 8. `size()`: This is a method available for PyTorch tensors. It returns the size or shape of a tensor. In the code, `train_data.data.size()` is used to get the size of the input images tensor, and `train_data.targets.size()` is used to get the size of the labels tensor.
 
 By using the `datasets.MNIST` class and these functions, you can conveniently download the MNIST dataset and access its images and labels for further processing or training machine learning models.
+
+### 3. Visualization   
+```python
+# Visualization
+import matplotlib.pyplot as plt
+
+# Import the matplotlib.pyplot module for visualization purposes
+
+plt.imshow(train_data.data[0], cmap='gray')
+# Display the image at index 0 from the train_data dataset using imshow()
+# The cmap='gray' argument specifies that the image should be displayed in grayscale
+
+plt.title('%i' % train_data.targets[0])
+# Set the title of the plot to the label/target corresponding to the image at index 0
+# The '%i' is a placeholder that will be replaced by the value of train_data.targets[0]
+
+plt.show()
+# Display the plot
+
+```
+
+
+
+
+### 4. Preparing data for training with DataLoaders
+   
+```python
+# Preparing the data for training
+from torch.utils.data import DataLoader
+
+# Import the DataLoader class from torch.utils.data module
+# The DataLoader class provides an iterable over a dataset for batching and parallel loading
+
+# The MNIST (Modified National Institute of Standards and Technology) data consists of 60,000 training images
+# and 10,000 test images. Each image is a crude 28 x 28 (784 pixels) handwritten digit from "0" to "9."
+# Each pixel value is a grayscale integer between 0 and 255.
+
+batch_size = 100
+# Set the batch size for training and testing data
+# A batch is a subset of the dataset that is processed together during training or inference
+
+loaders = {
+    'train': torch.utils.data.DataLoader(train_data,
+                                         batch_size=batch_size,
+                                         shuffle=True,
+                                         num_workers=1),
+    # Create a DataLoader object named 'train' for the training data
+    # Pass the 'train_data' dataset to the DataLoader
+    # Set the batch size using the 'batch_size' variable
+    # Set shuffle=True to randomize the order of the data during training
+    # Set num_workers=1 to use a single worker for loading the data
+
+    'test': torch.utils.data.DataLoader(test_data,
+                                        batch_size=batch_size,
+                                        shuffle=True,
+                                        num_workers=1),
+    # Create a DataLoader object named 'test' for the testing data
+    # Pass the 'test_data' dataset to the DataLoader
+    # Set the batch size using the 'batch_size' variable
+    # Set shuffle=True to randomize the order of the data during testing
+    # Set num_workers=1 to use a single worker for loading the data
+}
+
+```
+
+This code segment performs the following steps:
+
+1. Imports the `DataLoader` class from the `torch.utils.data` module. The `DataLoader` class provides an iterable over a dataset for batching and parallel loading.
+
+2. Sets the `batch_size` to 100. This defines the number of samples that will be processed together as a batch during training or testing.
+
+3. Creates a dictionary named `loaders` to store the DataLoader objects.
+
+4. Creates a DataLoader object named `'train'` for the training data. It uses the `train_data` dataset as input and configures the DataLoader with the specified `batch_size`, `shuffle=True` (to shuffle the data during training), and `num_workers=1` (to use a single worker for loading the data).
+
+5. Creates a DataLoader object named `'test'` for the testing data. It uses the `test_data` dataset as input and configures the DataLoader with the specified `batch_size`, `shuffle=True` (to shuffle the data during testing), and `num_workers=1` (to use a single worker for loading the data).
+
+By using the DataLoader objects created in this code, you can conveniently iterate over the training and testing data in batches during the training and testing phases of your model.
+
+
+## 2. Define the Convolutional Neural Network model
+
+```python
+import torch.nn as nn
+
+# Import the nn module from torch to define neural network models
+
+class CNN(nn.Module):
+    def __init__(self):
+        super(CNN, self).__init__()
+        # Define the CNN model by inheriting from the nn.Module class
+
+        self.conv1 = nn.Sequential(
+            nn.Conv2d(
+                in_channels=1,
+                out_channels=16,
+                kernel_size=5,
+                stride=1,
+                padding=2,
+            ),
+            nn.ReLU(),
+            nn.MaxPool2d(kernel_size=2),
+        )
+        # Define the first convolutional layer (conv1) using nn.Sequential
+        # nn.Conv2d creates a 2D convolutional layer
+        # in_channels=1 specifies that the input has 1 channel (grayscale image)
+        # out_channels=16 specifies the number of output channels or filters
+        # kernel_size=5 defines the size of the convolutional kernel (5x5)
+        # stride=1 specifies the stride of the convolution operation
+        # padding=2 adds padding to the input to ensure that the spatial dimensions remain the same after convolution
+        # nn.ReLU() applies the ReLU activation function
+        # nn.MaxPool2d performs max pooling with a kernel size of 2 and stride of 2 to downsample the feature maps
+
+        self.conv2 = nn.Sequential(
+            nn.Conv2d(16, 32, 5, 1, 2),
+            nn.ReLU(),
+            nn.MaxPool2d(2),
+        )
+        # Define the second convolutional layer (conv2) using nn.Sequential
+        # nn.Conv2d creates a 2D convolutional layer
+        # The input has 16 channels (output channels from conv1)
+        # out_channels=32 specifies the number of output channels or filters
+        # kernel_size=5 defines the size of the convolutional kernel (5x5)
+        # stride=1 specifies the stride of the convolution operation
+        # padding=2 adds padding to the input to ensure that the spatial dimensions remain the same after convolution
+        # nn.ReLU() applies the ReLU activation function
+        # nn.MaxPool2d performs max pooling with a kernel size of 2 and stride of 2 to downsample the feature maps
+
+        self.out = nn.Linear(32 * 7 * 7, 10)
+        # Define the fully connected layer (out) using nn.Linear
+        # The input size is 32 * 7 * 7, which is the number of output channels from conv2 multiplied by the spatial dimensions of the feature maps (7x7)
+        # The output size is 10, representing the number of classes in the classification task
+
+    def forward(self, x):
+        x = self.conv1(x)
+        x = self.conv2(x)
+        # Perform forward pass through conv1 and conv2
+
+        x = x.view(x.size(0), -1)
+        # Flatten the output of conv2 to (batch_size, 32 * 7 * 7)
+        # The size of the first dimension (batch_size) remains the same, and the second dimension is flattened
+
+        output = self.out(x)
+        # Perform forward pass through the fully connected layer (out) to obtain the output logits
+
+        return output, x
+        # Return the output logits and x (flattened feature maps) for visualization purposes
+
+
+```
+
+
+
+
+
+### 3. Visualization   
+```python
+
+```
