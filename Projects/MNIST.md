@@ -1,7 +1,7 @@
 # Contents
  - [Project Overview](#project-overview) 
  - [Prepare the data and environment](#1-prepare-the-data-and-environment)
- - [Define the Convolutional Neural Network model](#define-the-convolutional-neural-network-model)
+ - [Define the Convolutional Neural Network model](#2-define-the-convolutional-neural-network-model)
  
 # Project Overview 
 
