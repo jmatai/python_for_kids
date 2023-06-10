@@ -10,7 +10,7 @@
 
 # 1. Prepare the data and environment 
 
-### 1.1 Check the device and import modules 
+### 1.1. Check the device and import modules 
 
 ```python
 import torch
