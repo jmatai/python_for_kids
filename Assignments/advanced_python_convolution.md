@@ -4,8 +4,8 @@
 
 Below, we provide a convolution which is the main block of convolutional neural networks.   
 
-1) The followng code works for 3x3 kernel size. Make the code to work for any odd size kernels such as 5x5, 7x7 or 9x9 
-2) In the following the code, the pytorch convolution and the custom_convolve functions does not exactly match. Try ti make changes to either the custom_convolve or pytroch convolution to make them exactly match. 
+1) The followng code works for 3x3 kernel size. Make the code to work for any odd size kernels such as 5x5, 7x7 or 9x9. Specifically, both custom_convolve function and pytorch functin (nn.Conv2d) outputs must match.   
+2) In the following the code, the pytorch convolution and the custom_convolve functions does not exactly match. Try to make changes to either the custom_convolve or pytroch convolution to make them exactly match. 
 
 ```python
 import numpy as np
