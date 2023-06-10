@@ -1,4 +1,9 @@
-# Project Proposal Overview 
+# Contents
+ - [Project Overview](#project-overview) 
+ - [Prepare the data and environment](#prepare-the-data-and-environment)
+ - [Define the Convolutional Neural Network model](#define-the-convolutional-neural-network-model)
+ 
+# Project Overview 
 
 ## 1. Prepare the data and environment 
 
