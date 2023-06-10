@@ -1,7 +1,7 @@
 # Contents
  - [Project Overview](#project-overview) 
  - [Prepare the data and environment](#1-prepare-the-data-and-environment)
-     - [Check the device and import modules](#1.1-check-the-device-and-import-modules)
+     - [Check the device and import modules](#1-check-the-device-and-import-modules)
  - [Define the Convolutional Neural Network model](#2-define-the-convolutional-neural-network-model)
  - [Train the model](#3-train-the-model)
  - [Define Test function](#4-define-test-function)
@@ -10,7 +10,7 @@
 
 # 1. Prepare the data and environment 
 
-### 1.1 Check the device and import modules 
+### 1. Check the device and import modules 
 
 ```python
 import torch
