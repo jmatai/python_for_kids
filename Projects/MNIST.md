@@ -307,7 +307,7 @@ def train(num_epochs, cnn, loaders):
 
 ```
 
-## 3. Define Test function 
+## 4. Define Test function 
   
 ```python
 
