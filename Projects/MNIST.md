@@ -2,6 +2,8 @@
  - [Project Overview](#project-overview) 
  - [Prepare the data and environment](#1-prepare-the-data-and-environment)
  - [Define the Convolutional Neural Network model](#2-define-the-convolutional-neural-network-model)
+ - [Train the model](#3-train-the-model)
+ - [Define Test function](#4-define-test-function)
  
 # Project Overview 
 
@@ -305,7 +307,7 @@ def train(num_epochs, cnn, loaders):
 
 ```
 
-## 3. Define inference / Test function 
+## 3. Define Test function 
   
 ```python
 
