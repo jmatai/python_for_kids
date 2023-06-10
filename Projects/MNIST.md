@@ -1,8 +1,8 @@
 # Project Proposal Overview 
 
-## Libraries and MNIST dataset
+## 1. Prepare the data and environment 
 
-### 1. Check the device and import modules 
+### 1.1 Check the device and import modules 
 
 ```python
 import torch
@@ -36,7 +36,7 @@ The datasets module allows you to work with pre-built datasets like MNIST, CIFAR
 The ToTensor class from the transforms module allows you to convert data, such as images, into PyTorch tensors, which is the appropriate format for deep learning models.
 These imports enable you to load and process datasets, as well as convert the data into a suitable format for training and inference with deep learning models.
 
-### 2. Get the dataset  
+### 1.2 Get the dataset  
 ```python
 # Import the necessary modules
 from torchvision import datasets
@@ -82,7 +82,7 @@ print(train_data.targets.size())    # Number of labels in the training dataset
 
 By using the `datasets.MNIST` class and these functions, you can conveniently download the MNIST dataset and access its images and labels for further processing or training machine learning models.
 
-### 3. Visualization   
+### 1.3. Visualization (Optional)   
 ```python
 # Visualization
 import matplotlib.pyplot as plt
@@ -105,7 +105,7 @@ plt.show()
 
 
 
-### 4. Preparing data for training with DataLoaders
+### 1.4. Preparing data for training with DataLoaders
    
 ```python
 # Preparing the data for training
@@ -232,9 +232,133 @@ class CNN(nn.Module):
 
 ```
 
+## 3. Train the model 
+
+Here, we define a train function which will do the training of the CNN model. 
+
+```python
+def train(num_epochs, cnn, loaders):
+    # Function to train the CNN model
+
+    from torch.autograd import Variable
+    from torch import optim
+
+    # Import necessary modules for training
+
+    optimizer = optim.Adam(cnn.parameters(), lr=0.01)
+    # Define the optimizer (Adam) and specify the learning rate
+    # Pass the parameters of the CNN model (cnn.parameters()) to the optimizer for optimization
+
+    loss_func = nn.CrossEntropyLoss()
+    # Define the loss function (CrossEntropyLoss) for classification tasks
+
+    cnn.train()
+    # Set the model to train mode
+
+    total_step = len(loaders['train'])
+    # Calculate the total number of batches in the training data
+
+    for epoch in range(num_epochs):
+        # Iterate over the specified number of epochs
+
+        for i, (images, labels) in enumerate(loaders['train']):
+            # Iterate over the batches of the training data
+
+            b_x = Variable(images)  # batch x
+            b_y = Variable(labels)  # batch y
+
+            # Convert the batched input images and labels to Variables
+            # Variables are deprecated in recent PyTorch versions and can be replaced with tensors
+
+            output = cnn(b_x)[0]
+            # Perform forward pass through the CNN model to obtain the output logits
+
+            loss = loss_func(output, b_y)
+            # Compute the loss by comparing the output logits with the ground truth labels
+
+            optimizer.zero_grad()
+            # Clear the gradients of the optimizer for this training step
+
+            loss.backward()
+            # Perform backpropagation to compute the gradients of the loss with respect to the model parameters
+
+            optimizer.step()
+            # Update the model parameters by applying the computed gradients using the optimizer
+
+            if (i + 1) % 100 == 0:
+                # Print the training progress every 100 batches
+
+                print('Epoch [{}/{}], Step [{}/{}], Loss: {:.4f}'
+                      .format(epoch + 1, num_epochs, i + 1, total_step, loss.item()))
+
+    PATH = "mnist_trained_model.pt"
+    # Specify the file path to save the trained model
+
+    torch.save(cnn.state_dict(), PATH)
+    # Save the state dictionary of the CNN model to the specified file path
 
 
+```
 
+## 3. Define inference / Test function 
+  
+```python
+
+def test():
+    # Function to test the trained model on the test dataset
+
+    # Load the trained model
+    PATH = "mnist_trained_model.pt"
+    cnn = CNN()
+    cnn.load_state_dict(torch.load(PATH))
+    cnn.eval()
+    # Load the saved state dictionary of the CNN model
+    # Set the model to evaluation mode using the eval() method
+
+    # Test the model
+    with torch.no_grad():
+        # Disable gradient calculation since we are only testing
+
+        correct = 0
+        total = 0
+        final_accuracy = 0
+
+        total_iterations = len(loaders['test'].dataset.data) / batch_size
+        # Calculate the total number of iterations (batches) in the test dataset
+
+        for images, labels in loaders['test']:
+            # Iterate over the batches of the test dataset
+
+            test_output, last_layer = cnn(images)
+            # Perform forward pass through the CNN model to obtain the test output logits
+
+            pred_y = torch.max(test_output, 1)[1].data.squeeze()
+            # Get the predicted labels by finding the maximum value along the second dimension of the test output logits
+
+            accuracy = (pred_y == labels).sum().item() / float(labels.size(0))
+            # Compute the accuracy by comparing the predicted labels with the ground truth labels
+
+            final_accuracy += accuracy
+            # Accumulate the accuracy for each batch
+
+            print("The current batch accuracy: {}".format(accuracy))
+
+    print("The current accuracy of {} images is {}".format(len(loaders['test'].dataset.data), final_accuracy / total_iterations))
+    # Print the overall accuracy of the model on the test dataset
+
+
+```
+
+Here is how we are going to execute. 
+
+```python
+if __name__=="__main__":
+    cnn = CNN()
+    num_epochs = 10
+    # train(num_epochs, cnn, loaders) # This line runs only once. 
+    test()
+
+```
 
 ### 3. Visualization   
 ```python
