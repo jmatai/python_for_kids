@@ -1,11 +1,11 @@
 # Contents
  - [Project Overview](#project-overview) 
- - [Prepare the data and environment](#prepare-the-data-and-environment)
+ - [Prepare the data and environment](#1-prepare-the-data-and-environment)
  - [Define the Convolutional Neural Network model](#define-the-convolutional-neural-network-model)
  
 # Project Overview 
 
-# Prepare the data and environment 
+# 1. Prepare the data and environment 
 
 ### 1.1 Check the device and import modules 
 
