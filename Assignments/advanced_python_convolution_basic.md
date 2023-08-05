@@ -2,7 +2,9 @@
 
 ## Convolution code 
 
-Below, we provide a convolution which is the main block of convolutional neural networks.   
+Below, we provide a convolution code which is the main block of convolutional neural networks. 
+
+Please answer these questions:   
 
 1) The followng code works for 3x3 filter(F) size and 4x4 image (I). Please make sure you can run this code.
 2) Please chaning the dimension of input image (I), and observe how this impacts the output?  Change the dimension of I from 4x4 to several different dimensions such as 5x5, 6x6, 8x8, 10x10, 15x15 and 100x100. 
