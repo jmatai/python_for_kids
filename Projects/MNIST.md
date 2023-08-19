@@ -7,6 +7,11 @@
  
 # Project Overview 
 
+Write about project overview. Explain what is a Digit classification and how it works.  
+
+![Digit Classification](digit_class.png)
+
+
 # 1. Prepare the data and environment 
 
 ### 1.1. Check the device and import modules 
