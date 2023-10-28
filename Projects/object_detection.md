@@ -7,9 +7,8 @@
  
 # Project Overview 
 
-Write about project overview. Explain what is a Digit classification and how it works.  
+Write about project overview. Explain what is a object detection and how it works.  
 
-![Digit Classification](digit_class.png)
 
 
 # 1. Prepare the environment  
@@ -18,8 +17,6 @@ Write about project overview. Explain what is a Digit classification and how it 
 ### 1. Open Anaconda prompt and exectute the following commands to setup the environment
  
 ```python
-#  
-
 conda create --name pytorch_transformer_py3.11 python==3.11
 conda activate pytorch_transformer_py3.11
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
